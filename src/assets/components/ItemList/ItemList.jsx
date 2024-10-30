@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getProduts } from '../../Data/data'
 import ItemProduct from './itemProduct'
+
+
 const ItemList = ({text}) => {
     const [productos,setProductos]= useState([])
 
@@ -17,6 +19,7 @@ const ItemList = ({text}) => {
 
       <div>
         <ItemProduct productos={productos}/>
+      
       </div>
     </>
     

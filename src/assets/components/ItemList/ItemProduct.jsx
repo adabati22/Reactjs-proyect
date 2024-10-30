@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 
-const itemProduct = ({productos}) => {
+const ItemProduct = ({productos}) => {
     console.log(productos.map (e=>e.nombre))    
   return (
     <div className='cardConteiner'>
@@ -24,4 +24,4 @@ const itemProduct = ({productos}) => {
   )
 }
 
-export default itemProduct
+export default ItemProduct
