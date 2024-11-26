@@ -11,13 +11,33 @@ body{
  align-content: center;
  text-align: center;
  font-family: Arial, Helvetica, sans-serif;
-gap: 600px;
+ padding: 10px;
+
+
+}
+.gatito{
+  width: 60px;
+  border-radius: 100px;
+  cursor: pointer;
+  &:hover{
+    border: 1px solid rgb(19, 173, 37);
+  }
+}
+.link{
+  font-size: 25px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  &:hover{
+    color: gray;
+
+  }
 }
 .cardConteiner{
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 30px;
+
 margin-top: 20px;
 }
 .card{
@@ -47,9 +67,30 @@ margin-top: 20px;
   font-weight: 700;
   color: rgb(46, 43, 43);
   cursor: pointer;
+  margin-top: 10px;
   &:hover{
     background-color: rgb(28, 216, 69);
     color: white;
     border: solid 1px white;
   }
 }
+ /* detalle */
+
+ .cartita{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 1px black;
+  margin: 20px 250px;
+  border-radius: 5px;
+  background-color: rgb(237, 212, 180);
+ }
+ .tiendita{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+ }
