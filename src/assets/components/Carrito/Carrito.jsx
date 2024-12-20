@@ -40,7 +40,7 @@ const  Carrito = () =>  {
 
             <div>
                 <button onClick={ vaciarCarrito }>Vaciar Carrito</button>
-                <Link to="/checkout">Finalizar compra</Link> 
+                <Link to="/checkout"><button> Finalizar compra</button></Link> 
             </div>
             </>
         }
