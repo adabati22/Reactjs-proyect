@@ -1,14 +1,12 @@
 import React from 'react'
-import Button from '../Button/Button'
 import { Link } from 'react-router-dom'
 
 const ItemProduct = ({productos}) => {
-    console.log(productos.map (e=>e.nombre))    
   return (
     <div className='cardConteiner'>
-    {productos.map ((e)=> {
+    {productos.map ((e , index)=> {
     return(
-        <div className='card'>
+        <div key={index} className='card'>
             <img src={e.img} alt="" />
             <h2>
                 {e.nombre}   
@@ -18,7 +16,7 @@ const ItemProduct = ({productos}) => {
             <Link to={`/Tienda/${e.id}`}><span>Más detalles</span></Link>
             
 
-            <Button texto={"Agregar"}/>
+          
         </div>
     )
 

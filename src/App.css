@@ -27,6 +27,8 @@ body{
   font-size: 25px;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+
   &:hover{
     color: gray;
 
@@ -56,8 +58,8 @@ margin-top: 20px;
     
   }
   img{
-    width: 150px;
-    height: 130px;
+    width: 250px;
+    height: 200px;
     border-radius: 5px;
   }
 }
@@ -86,7 +88,11 @@ margin-top: 20px;
   border: solid 1px black;
   margin: 20px 250px;
   border-radius: 5px;
-  background-color: rgb(237, 212, 180);
+  background-color: white;
+  img{
+    width: 350px;
+    height: 200px;
+  }
  }
  .tiendita{
   display: flex;
@@ -94,23 +100,45 @@ margin-top: 20px;
   justify-content: center;
   text-align: center;
  }
- .homecito{
-  background-image: url(https://media.istockphoto.com/id/1457433817/es/foto/grupo-de-alimentos-saludables-para-la-dieta-flexitariana.jpg?s=612x612&w=0&k=20&c=2w5l2DEJWFGxSnmJxX_RCE40RriE7WtSoKKpuxw5luE=);
-  background-size: cover;
-  background-position: center;  
-  height: 50vh;
-  background-repeat: no-repeat;
+ 
+ .botoncard{
   display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
   gap: 20px;
-  color: rgb(68, 203, 221);
-  font-size: 50px;
-  img{
-    width: 200px;
-    border-radius: 200px;
+  margin-bottom: 20px;
+  button{
+    padding: 0px 10px;
+    cursor: pointer;
+    
   }
+ }
+ .botona{
+  margin-bottom: 30px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: chartreuse;
+  cursor: pointer;
+ }
 
+ .carrito-container{
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+ }
+
+ .cartCarrito{
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 15px;
+  width: 100%;
+  img{
+    width: 50px;
+  }
+ }
+
+ .cartCarrito p:last-child {
+  cursor: pointer;
  }

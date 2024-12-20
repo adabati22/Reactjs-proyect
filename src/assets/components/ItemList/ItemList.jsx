@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import { getProduts } from '../../Data/data'
 import ItemProduct from './ItemProduct'
+import{  collection, getDocs,query,where} from 'firebase/firestore';
+import {db} from "../../../firebase/firebase";
+import { useParams } from 'react-router-dom';
 
 
 const ItemList = ({text}) => {
-    const [productos,setProductos]= useState([])
-
+    const [productos,setProductos]= useState([]);
+    const categoria= useParams().categoria
+ 
     useEffect(()=>{
-      getProduts()
-      .then(res=> setProductos(res))
-      .catch(e=> console.error(e))
-      .finally(console.log("se resolvio la promesa"))
-    },[])
+      const productosRef = collection(db, "productos");
+      const q = categoria ? query(productosRef, where("categoria", "==", categoria)) : productosRef;
+
+
+
+      getDocs(q)
+      .then((resp)=>{
+
+        setProductos(
+          resp.docs.map((doc)=> {
+            return{...doc.data(),id:doc.id}
+          })
+        )
+      })
+    },[categoria])
    
   return (
     <>
